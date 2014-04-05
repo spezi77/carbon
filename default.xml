@@ -459,9 +459,10 @@
   <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="vendor/carbon" name="android_vendor_carbon" remote="spz" revision="refs/heads/kk" />
-  <!-- Use Evervolv projects / Nikez kernel 2.6.38 / vendor blobs -->
+  <!-- Use Nikez kernel 2.6.38 with a few alignments -->
   <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="refs/heads/cm-11.0" />
-  <project path="vendor/htc" name="Evervolv/android_vendor_htc" revision="refs/heads/kitkat" /> 
+  <!-- Use htc vendor blobs with latest Adreno libs from AU_LINUX_ANDROID_JB_VANILLA_04.02.02.060.053 -->
+  <project path="vendor/htc" name="android_vendor_htc" remote="spz" revision="refs/heads/kitkat" /> 
   <!-- Use legacy projects maintained by Evervolv -->
   <project path="hardware/qcom/audio-legacy" name="Evervolv/android_hardware_qcom_audio-legacy" revision="refs/heads/kitkat" />
   <project path="hardware/qcom/display-legacy" name="Evervolv/android_hardware_qcom_display-legacy" revision="refs/heads/kitkat" />
