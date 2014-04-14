@@ -63,6 +63,7 @@
   <project path="external/apache-qp" name="platform/external/apache-qp" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="external/apache-xml" name="platform/external/apache-xml" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="external/arduino" name="platform/external/arduino" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
+  <project path="external/bash" name="CyanogenMod/android_external_bash" remote="cm" revision="cm-11.0" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="external/blktrace" name="platform/external/blktrace" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="cm" revision="cm-11.0" groups="pdk" />
