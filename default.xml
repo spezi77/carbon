@@ -11,18 +11,17 @@
 
   <remote  name="cr"
            fetch="git://github.com/"
-           review="review.carbon-rom.com" />
+           review="review.carbonrom.org" />
 
   <remote  name="gh"
            fetch="https://github.com/" />
+  <remote  name="sf"
+	   fetch="git://git.code.sf.net/p/"
+	   sync-j="4" />
 
   <remote  name="tm"
            fetch="git://github.com/TheMuppets/" />
 	   
-  <remote  name="slim"
-           fetch="https://github.com/slimroms"
-           review="gerrit.slimroms.net" />
-
   <remote  name="spz"
            fetch="git://github.com/spezi77/" />
 
@@ -282,7 +281,7 @@
   <project path="frameworks/ml" name="platform/frameworks/ml" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
-  <!--<project path="frameworks/opt/cards" name="SlimRoms/frameworks_opt_cards" remote="gh" revision="kk4.4" />-->
+  <project path="frameworks/opt/cards" name="SlimRoms/frameworks_opt_cards" remote="gh" revision="kk4.4" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="frameworks/opt/datetimepicker" name="platform/frameworks/opt/datetimepicker" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="frameworks/opt/emoji" name="CyanogenMod/android_frameworks_opt_emoji" remote="cm" revision="cm-11.0" />
@@ -352,9 +351,8 @@
   <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" remote="cm" revision="cm-11.0" />
   <project path="packages/apps/Mms" name="CarbonDev/android_packages_apps_Mms" />
-  <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" remote="cm" revision="cm-11.0" />
-  <project path="packages/apps/OmniSwitch" name="android_packages_apps_OmniSwitch" remote="omni" revision="android-4.4" />
+  <project path="packages/apps/OmniSwitch" name="CarbonDev/android_packages_apps_OmniSwitch" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="packages/apps/PackageInstaller" name="omnirom/android_packages_apps_PackageInstaller" remote="gh" revision="android-4.4" />
   <project path="packages/apps/PerformanceControl" name="CarbonDev/android_packages_apps_PerformanceControl" />
@@ -378,7 +376,7 @@
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="packages/providers/CalendarProvider" name="CyanogenMod/android_packages_providers_CalendarProvider" remote="cm" revision="cm-11.0" />
   <project path="packages/providers/ContactsProvider" name="CarbonDev/android_packages_providers_ContactsProvider" />
-  <project path="packages/providers/DownloadProvider" name="SlimRoms/packages_providers_DownloadProvider" remote="gh" revision="kk4.4" />
+  <project path="packages/providers/DownloadProvider" name="CyanogenMod/android_packages_providers_DownloadProvider" remote="cm" revision="cm-11.0" />
   <project path="packages/providers/MediaProvider" name="CarbonDev/android_packages_providers_MediaProvider" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" remote="aosp" revision="refs/tags/android-4.4.2_r2" />
   <project path="packages/providers/TelephonyProvider" name="CyanogenMod/android_packages_providers_TelephonyProvider" remote="cm" revision="cm-11.0" />
@@ -463,38 +461,51 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="cm" revision="cm-11.0" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" remote="cm" revision="cm-11.0" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" remote="cm" revision="cm-11.0" />
-  
-  <!-- SlimRoms' Recents Card lib -->
-  <project path="frameworks/opt/cards" name="frameworks_opt_cards" remote="slim" revision="kk4.4"/>
+
+  <!-- Device specific projects -->
+
   <!-- Use vendor and devicetrees with adaptions for carbonrom -->
   <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="vendor/carbon" name="android_vendor_carbon" remote="spz" revision="refs/heads/carbon-kk" />
+  
   <!-- Use Nikez kernel 2.6.38 with a few alignments -->
   <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="refs/heads/smart-patch" />
+  
   <!-- Use htc vendor blobs with latest Adreno libs from AU_LINUX_ANDROID_JB_VANILLA_04.02.02.060.053 -->
   <project path="vendor/htc" name="android_vendor_htc" remote="spz" revision="refs/heads/kitkat" /> 
+  
   <!-- Use legacy projects maintained by Evervolv -->
   <project path="hardware/qcom/audio-legacy" name="Evervolv/android_hardware_qcom_audio-legacy" revision="refs/heads/kitkat" />
   <project path="hardware/qcom/display-legacy" name="Evervolv/android_hardware_qcom_display-legacy" revision="refs/heads/kitkat" />
   <project path="hardware/qcom/gps-legacy" name="Evervolv/android_hardware_qcom_gps-legacy" revision="refs/heads/kitkat" />  
+  
   <!-- Use forked projects with required changes for bravo, e.g. HCW_BLIT & RIL fix -->
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="spz" revision="refs/heads/cm-11.0" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="external/iproute2" name="android_external_iproute2" remote="spz" revision="refs/heads/cm-11.0" />
   <project path="frameworks/native" name="android_frameworks_native" remote="spz" revision="refs/heads/carbon-kk" />
+  
   <!-- Add Trackball wake button into CarbonFibers -->
   <project path="packages/apps/CarbonFibers" name="android_packages_apps_CarbonFibers" remote="spz" revision="refs/heads/carbon-kk" />  
+  
   <!-- Use forked carbon_frameworks_base with mods for Trackball wake -->
   <project path="frameworks/base" name="android_frameworks_base" remote="spz" revision="refs/heads/carbon-kk" />
+  
   <!-- Use Torch mod (won't shutdown when screen turns off) -->
   <project path="packages/apps/Torch" name="android_packages_apps_Torch" remote="spz" revision="refs/heads/cm-11.0" />
+  
   <!-- Use bravo compatible camera -->
   <project path="packages/apps/Camera2" name="Evervolv/android_packages_apps_Camera2" revision="refs/heads/kitkat" />      
-  <!-- Use cm's bionic instead of carbon (fix for telephony issue "No SIM card detected") -->
-  <project path="bionic" name="CyanogenMod/android_bionic" revision="refs/heads/cm-11.0" />
+  
+  <!-- Use cm's renderscript instead (fix for telephony issue "No SIM card detected") -->
   <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" revision="refs/heads/cm-11.0" />
-  <!-- Use toolchain arm-eabi-4.8.3 for better performance and responsiveness -->
+  
+  <!-- Sabermod arm-eabi-4.10 toolchain -->
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" revision="refs/heads/cm-11.0" />
-  <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.8.3" name="android_prebuilts_gcc_linux-x86_arm_arm-cortex_a8-linux-gnueabi-4.8" remote="spz" revision="master" />
+  <project path="prebuilt/linux-x86/toolchain/sm-arm-eabi-4.10" name="UBERUTILS/arm-eabi-4.10" remote="gh" revision="master" />
+    
+  <!-- Switch bionic to Purity for increased performance -->
+  <project path="bionic" name="KitKatPurity/platform_bionic" remote="gh" revision="kitkat" />
+  
 </manifest>
