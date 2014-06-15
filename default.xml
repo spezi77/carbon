@@ -36,7 +36,7 @@
            remote="cr"
            sync-j="4" />
 
-  <project path="build" name="CarbonDev/android_build" groups="pdk" >
+  <project path="build" name="android_build" remote="spz" revision="refs/heads/carbon-kk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="android" name="CarbonDev/android" />
@@ -490,7 +490,7 @@
   <!-- Use vendor and devicetrees with adaptions for carbonrom -->
   <project path="device/htc/bravo" name="android_device_htc_bravo" remote="spz" revision="refs/heads/carbon-kk" />
   <project path="device/htc/qsd8k-common" name="android_device_htc_qsd8k-common" remote="spz" revision="refs/heads/carbon-kk" />
-  <project path="vendor/carbon" name="android_vendor_carbon" remote="spz" revision="refs/heads/carbon-kk" />
+  <project path="vendor/carbon" name="android_vendor_carbon" remote="spz" revision="refs/heads/kk" />
   
   <!-- Use Carbonized kernel 2.6.38 with extended frequency table -->
   <project path="kernel/htc/qsd8k" name="android_kernel_htc_qsd8k" remote="spz" revision="refs/heads/carbonized" />
@@ -524,9 +524,10 @@
   <!-- Use cm's renderscript instead (fixes "No SIM card detected") -->
   <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" revision="refs/heads/cm-11.0" />
   
-  <!-- Sabermod arm-eabi-4.10 toolchain -->
+  <!-- Use custom toolchain -->
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" revision="refs/heads/cm-11.0" />
   <project path="prebuilt/linux-x86/toolchain/sm-arm-eabi-4.10" name="UBERUTILS/arm-eabi-4.10" remote="gh" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="JustArchi/Linaro" remote="gh" revision="4.8-androideabi" /> 
     
   <!-- Switch bionic to Purity for increased performance -->
   <project path="bionic" name="KitKatPurity/platform_bionic" remote="gh" revision="kitkat" />
