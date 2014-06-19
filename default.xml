@@ -41,7 +41,6 @@
   </project>
   <project path="android" name="CarbonDev/android" />
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" remote="aosp" revision="refs/tags/android-4.4.3_r1.1" />
-  <project path="art" name="CarbonDev/android_art" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" remote="aosp" revision="refs/tags/android-4.4.3_r1.1" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" remote="aosp" revision="refs/tags/android-4.4.3_r1.1" />
   <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" groups="pdk" remote="cm" revision="cm-11.0" />
@@ -526,8 +525,10 @@
   
   <!-- Use custom toolchain -->
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" revision="refs/heads/cm-11.0" />
-  <project path="prebuilt/linux-x86/toolchain/sm-arm-eabi-4.10" name="UBERUTILS/arm-eabi-4.10" remote="gh" revision="master" />
+  <!--<project path="prebuilt/linux-x86/toolchain/sm-arm-eabi-4.10" name="UBERUTILS/arm-eabi-4.10" remote="gh" revision="master" />-->
+  <project path="prebuilt/linux-x86/toolchain/arm-linux-linaro-4.9" name="Evervolv/android_prebuilts_gcc_linux-x86_arm_arm-linux-linaro-4.9" remote="gh" revision="kitkat" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="JustArchi/Linaro" remote="gh" revision="4.8-androideabi" /> 
+  <project path="art" name="android_art" remote="spz" revision="kk"  />
     
   <!-- Switch bionic to Purity for increased performance -->
   <project path="bionic" name="KitKatPurity/platform_bionic" remote="gh" revision="kitkat" />
